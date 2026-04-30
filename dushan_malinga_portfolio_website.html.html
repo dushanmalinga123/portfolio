@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dushan Malinga | Cyber Security Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f8fafc;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    nav {
+      background: #0f172a;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #0f172a;
+      border-left: 5px solid #2563eb;
+      padding-left: 12px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 8px 12px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dushan Malinga</h1>
+    <p>Junior SOC Analyst | Cyber Security Undergraduate | Network & Security Support Officer</p>
+    <a class="btn" href="#contact">Contact Me</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am Dushan Malinga, a Cyber Security undergraduate at the Sri Lanka Institute of Information Technology. I have over one year of experience in Security Operations, working as a Junior SOC Analyst with hands-on exposure to monitoring and analyzing security events for local and international clients across banking, insurance, and corporate sectors.
+      </p>
+      <p>
+        My career goal is to grow as a skilled cyber security professional, specializing in Security Operations, Threat Intelligence, Incident Response, and Network Security.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="card">
+      <span class="tag">Security Event Monitoring</span>
+      <span class="tag">Incident Detection & Response</span>
+      <span class="tag">Log Analysis</span>
+      <span class="tag">Threat Hunting</span>
+      <span class="tag">Threat Investigation</span>
+      <span class="tag">Phishing Analysis</span>
+      <span class="tag">CTI Report Writing</span>
+      <span class="tag">Firewall Monitoring</span>
+      <span class="tag">VPN Monitoring</span>
+      <span class="tag">Reporting & Documentation</span>
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>Tools & Technologies</h2>
+    <div class="card">
+      <span class="tag">Fortinet FortiSIEM</span>
+      <span class="tag">Stellar Cyber SIEM</span>
+      <span class="tag">CrowdStrike Falcon XDR/EDR</span>
+      <span class="tag">Trellix SIEM</span>
+      <span class="tag">Microsoft Sentinel</span>
+      <span class="tag">Microsoft Defender XDR</span>
+      <span class="tag">FortiRecon</span>
+      <span class="tag">Izoologic Brand Protection</span>
+      <span class="tag">Chronicle</span>
+      <span class="tag">Cortex</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Junior SOC Analyst</h3>
+        <p><strong>CryptoGen Pvt Ltd</strong></p>
+        <p><strong>Period:</strong> 2024 - Present</p>
+        <ul>
+          <li>Operated in a 24/7 Security Operations Center on rotational shifts.</li>
+          <li>Monitored and responded to real-time security events.</li>
+          <li>Investigated incidents across SIEM and XDR platforms.</li>
+          <li>Escalated incidents within SLA timelines with findings and mitigation recommendations.</li>
+          <li>Prepared daily, weekly, and Cyber Threat Intelligence reports.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Network and Security Support Officer</h3>
+        <p><strong>Port City BPO</strong></p>
+        <p><strong>Period:</strong> January 2026 - Present</p>
+        <ul>
+          <li>Provided technical support for networking issues and system failures.</li>
+          <li>Installed, configured, and maintained routers, switches, firewalls, and servers.</li>
+          <li>Implemented security measures, patch updates, firewall configuration, and server management.</li>
+          <li>Monitored network traffic for unauthorized access, breaches, and attacks.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <ul>
+        <li><strong>BSc (Hons) in Information Technology - Cyber Security</strong>, Sri Lanka Institute of Information Technology, 2022 - 2026, GPA: 3.0</li>
+        <li><strong>GCE A/L Engineering Technology</strong>, Taxila Central College, Horana, 3 B passes, Z-score: 1.6649</li>
+        <li><strong>GCE O/L</strong>, Ashoka College, Horana, 8 A passes and 1 B pass</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Achievements & Certifications</h2>
+    <div class="card">
+      <ul>
+        <li>SIEM Fundamentals - Google, 2024</li>
+        <li>Ethical Hacking Essentials - EC-Council, 2024</li>
+        <li>Introduction to Cybersecurity - Cisco, 2024</li>
+        <li>Introduction to the Threat Landscape 2.0 - Fortinet, 2024</li>
+        <li>Getting Started in Cybersecurity 2.0 Self-Paced - Fortinet, 2024</li>
+        <li>Foundations of Operationalizing MITRE ATT&CK v13 - Google, 2024</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects Worked</h2>
+    <div class="card">
+      <h3>Security Operations Monitoring for Multiple Clients</h3>
+      <p><strong>Industry:</strong> Banking, Insurance, and Corporate Sectors</p>
+      <p><strong>Role:</strong> Junior SOC Analyst</p>
+      <p><strong>Technologies:</strong> SIEM, XDR/EDR platforms, Threat Intelligence Platforms, Firewalls, Dark Web Monitoring Tools</p>
+      <ul>
+        <li>Provided 24/7 security monitoring and incident response for multiple client environments.</li>
+        <li>Maintained regular communication with clients and client leads.</li>
+        <li>Performed threat hunting and incident analysis.</li>
+        <li>Maintained case escalation trackers and shift handovers.</li>
+        <li>Prepared daily and weekly reports to improve security visibility.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Email:</strong> dushanmalinga2002@gmail.com</p>
+      <p><strong>Phone:</strong> 070-1024724 / 076-4715649</p>
+      <p><strong>LinkedIn:</strong> Add your LinkedIn profile URL here</p>
+      <a class="btn" href="mailto:dushanmalinga2002@gmail.com">Send Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Dushan Malinga. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
