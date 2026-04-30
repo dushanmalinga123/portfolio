@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cyber Security Portfolio of Dushan Malinga - Junior SOC Analyst skilled in SIEM, XDR, Threat Hunting and Incident Response." />
   <title>Dushan Malinga | Cyber Security Portfolio</title>
+
   <style>
     * {
       margin: 0;
@@ -12,123 +14,276 @@
       scroll-behavior: smooth;
     }
 
+    :root {
+      --bg: #020617;
+      --card: rgba(15, 23, 42, 0.85);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --cyan: #22d3ee;
+      --blue: #2563eb;
+      --green: #22c55e;
+      --border: rgba(34, 211, 238, 0.25);
+    }
+
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      color: #1f2937;
-      background: #f8fafc;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(34, 211, 238, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.22), transparent 35%),
+        var(--bg);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: -1;
     }
 
     header {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-      padding: 70px 20px;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .hero-box {
+      max-width: 950px;
+      padding: 45px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: rgba(15, 23, 42, 0.72);
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.18);
+      backdrop-filter: blur(12px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .status {
+      display: inline-block;
+      color: var(--green);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      background: rgba(34, 197, 94, 0.08);
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: clamp(42px, 7vw, 76px);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ffffff, var(--cyan), #93c5fd);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     header p {
-      font-size: 18px;
-      max-width: 800px;
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 850px;
       margin: auto;
     }
 
+    .typing {
+      color: var(--cyan);
+      font-weight: bold;
+    }
+
     nav {
-      background: #0f172a;
-      padding: 15px;
+      background: rgba(2, 6, 23, 0.88);
+      padding: 16px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
     }
 
     nav a {
-      color: white;
+      color: var(--text);
       text-decoration: none;
       margin: 0 12px;
       font-weight: bold;
       font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 12px var(--cyan);
     }
 
     section {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 70px 20px;
+      animation: fadeUp 0.8s ease both;
     }
 
     h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-      color: #0f172a;
-      border-left: 5px solid #2563eb;
-      padding-left: 12px;
+      font-size: 34px;
+      margin-bottom: 26px;
+      color: white;
+      border-left: 5px solid var(--cyan);
+      padding-left: 14px;
+      text-shadow: 0 0 18px rgba(34, 211, 238, 0.35);
+    }
+
+    h3 {
+      color: var(--cyan);
+      margin-bottom: 8px;
     }
 
     .card {
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      background: var(--card);
+      padding: 28px;
+      margin-bottom: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+      transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+      backdrop-filter: blur(12px);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(34, 211, 238, 0.7);
+      box-shadow: 0 0 35px rgba(34, 211, 238, 0.22);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
     }
 
     ul {
       margin-left: 20px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: white;
     }
 
     .tag {
       display: inline-block;
-      background: #dbeafe;
-      color: #1e40af;
-      padding: 8px 12px;
-      border-radius: 20px;
-      margin: 5px;
+      background: rgba(34, 211, 238, 0.08);
+      color: var(--cyan);
+      padding: 10px 14px;
+      border-radius: 999px;
+      margin: 6px;
       font-size: 14px;
       font-weight: bold;
+      border: 1px solid rgba(34, 211, 238, 0.28);
+      transition: 0.3s;
+    }
+
+    .tag:hover {
+      background: rgba(34, 211, 238, 0.18);
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(34, 211, 238, 0.25);
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #2563eb;
+      margin: 18px 8px 0;
+      padding: 13px 22px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-weight: bold;
+      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.35);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 28px rgba(34, 211, 238, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .stat-box {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.65);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 34px;
+      color: var(--cyan);
     }
 
     footer {
-      background: #0f172a;
+      background: rgba(2, 6, 23, 0.9);
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 30px;
       margin-top: 30px;
+      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero-box {
+        padding: 30px 20px;
       }
 
       nav a {
         display: inline-block;
-        margin: 6px;
+        margin: 7px;
+      }
+
+      section {
+        padding: 50px 18px;
       }
     }
   </style>
@@ -136,14 +291,19 @@
 <body>
 
   <header>
-    <h1>Dushan Malinga</h1>
-    <p>Junior SOC Analyst | Cyber Security Undergraduate | Network & Security Support Officer</p>
-    <a class="btn" href="#contact">Contact Me</a>
+    <div class="hero-box">
+      <span class="status">● Available for Cyber Security Opportunities</span>
+      <h1>Dushan Malinga</h1>
+      <p><span class="typing">Junior SOC Analyst</span> | Cyber Security Undergraduate | Network & Security Support Officer</p>
+      <a class="btn" href="#contact">Contact Me</a>
+      <a class="btn btn-outline" href="#projects">View Projects</a>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#tools">Tools</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#certifications">Certifications</a>
@@ -160,6 +320,20 @@
       <p>
         My career goal is to grow as a skilled cyber security professional, specializing in Security Operations, Threat Intelligence, Incident Response, and Network Security.
       </p>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>1+</h3>
+          <p>Year SOC Experience</p>
+        </div>
+        <div class="stat-box">
+          <h3>10+</h3>
+          <p>Client Environments</p>
+        </div>
+        <div class="stat-box">
+          <h3>6</h3>
+          <p>Certifications</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -201,7 +375,7 @@
       <div class="card">
         <h3>Junior SOC Analyst</h3>
         <p><strong>CryptoGen Pvt Ltd</strong></p>
-        <p><strong>Period:</strong> 2024 - September to  2026-January</p>
+        <p><strong>Period:</strong> September 2024 - January 2026</p>
         <ul>
           <li>Operated in a 24/7 Security Operations Center on rotational shifts.</li>
           <li>Monitored and responded to real-time security events.</li>
